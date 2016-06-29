@@ -1,0 +1,1 @@
+# akka-http-docker-minimal-seed
