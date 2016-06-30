@@ -6,7 +6,7 @@
 
 ### Run container
 
-`$ docker run -it -p000:5000 akka-http-docker-minimal-seed:1.0`
+`$ docker run -it -p 5000:5000 akka-http-docker-minimal-seed:1.0`
 
 ### Test app
 
