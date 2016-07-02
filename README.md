@@ -12,11 +12,24 @@ clone the project and run: `$ sbt docker:publishLocal`
 
 After generating the container (step above), run the container:
 
-`$ docker run -it -p 5000:5000 akka-http-docker-minimal-seed:1.0`
+`$ docker run -dit -p 5000:5000 --name akka-minimal-seed akka-http-docker-minimal-seed:1.0`
+
+You will get a response like this:
+
+```
+$ docker run -dit -p 5000:5000 --name akka-minimal-seed akka-http-docker-minimal-seed:1.0
+6c3ceda8b0a4dc67633c577bb57dd949e17afbc101fd1b190c2e67efba9c9b7f
+```
 
 ### Test app
 
 open address on a web browser: **http://localhost:5000/healthcheck**
+
+### Stop the container
+
+To stop the container, run:
+
+`$ docker stop akka-minimal-seed`
 
 -----
 
