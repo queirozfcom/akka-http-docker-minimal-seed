@@ -21,7 +21,7 @@ $ docker run -dit -p 5000:5000 --name akka-minimal-seed akka-http-docker-minimal
 
 ### Test app
 
- - open address on a web browser: **http://localhost:5000/healthcheck**
+ - Open address on a web browser: **http://localhost:5000/healthcheck**
 
  - To test using **Postman**, use this link: 
 
