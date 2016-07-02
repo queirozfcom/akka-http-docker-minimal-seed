@@ -1,10 +1,16 @@
 # akka-http-docker-minimal-seed
 
+Sample project showcasing some basic use cases for akka-http, as well as docker packaging via [sbt-native-packager](https://github.com/sbt/sbt-native-packager)
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/34021b48a56eb5ffe000)
+
 ### Dockerize app
 
-`$ sbt docker:publishLocal`
+clone the project and run: `$ sbt docker:publishLocal`
 
 ### Run container
+
+After generating the container (step above), run the container:
 
 `$ docker run -it -p 5000:5000 akka-http-docker-minimal-seed:1.0`
 
@@ -18,9 +24,7 @@ open address on a web browser: **http://localhost:5000/healthcheck**
 
 - Async Http calls to external services
 
-- Automatic validation of body contents for POST methods
-
-- Automatic conversion of domain classes to Json
+- How to convert your models to/from JSON and also validate input
 
 - How to structure your akka-http application
 

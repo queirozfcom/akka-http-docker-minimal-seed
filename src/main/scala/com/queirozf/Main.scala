@@ -16,10 +16,11 @@ object Main extends App{
   implicit val ec = system.dispatcher
 
   // this is one way of dividing route responsibilities among several classes
+  // so as not to keep this class overly polluted
   val stockRoutes = (new StockRoutes).routes
   val userRoutes = (new UserRoutes).routes
 
-
+  // GET /healthcheck will respond 200 Ok
   def healthCheckRoute = {
     path("healthcheck"){
       get{
@@ -28,6 +29,8 @@ object Main extends App{
     }
   }
 
+  // routes can be combined so here we are combining the standalone healthcheck route
+  // with other routes we've created
   val allRoutes = healthCheckRoute ~ stockRoutes ~ userRoutes
 
   // here the server is started

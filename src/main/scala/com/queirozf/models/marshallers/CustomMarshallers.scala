@@ -9,7 +9,7 @@ import spray.json.DefaultJsonProtocol
   */
 object CustomMarshallers extends SprayJsonSupport with DefaultJsonProtocol {
 
-  implicit val userFormFormat = jsonFormat3(UserFormModel)
   implicit val userFormat = jsonFormat4(User)
+  implicit val userFormFormat = jsonFormat3(UserFormModel)
 
 }
