@@ -2,8 +2,6 @@
 
 Sample project showcasing some basic use cases for akka-http, as well as docker packaging via [sbt-native-packager](https://github.com/sbt/sbt-native-packager)
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/34021b48a56eb5ffe000)
-
 ### Dockerize app
 
 clone the project and run: `$ sbt docker:publishLocal`
@@ -23,7 +21,11 @@ $ docker run -dit -p 5000:5000 --name akka-minimal-seed akka-http-docker-minimal
 
 ### Test app
 
-open address on a web browser: **http://localhost:5000/healthcheck**
+ - open address on a web browser: **http://localhost:5000/healthcheck**
+
+ - To test using **Postman**, use this link: 
+
+    [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/34021b48a56eb5ffe000)
 
 ### Stop the container
 
